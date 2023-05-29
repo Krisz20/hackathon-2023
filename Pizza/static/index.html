@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza order</title>
+    <style>
+        /* A chat konténer stílusa */
+        .chat-container {
+            height: 80vh;
+            overflow-y: scroll;
+            border: 1px solid #ccc; 
+            padding: 10px;
+        }
+        
+        /* Az asszisztens üzenetének stílusa */
+        .assistant-message {
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        /* A felhasználó üzenetének stílusa */
+        .user-message {
+            background-color: #d8eafc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: right;
+        }
+
+        /* A form szélességének beállítása */
+        form {
+            display: flex;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        /* A beviteli mező stílusa */
+        input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+        }
+        
+        /* A beviteli mező stílusa amikor a felhasználó rákattint */
+        input[type="text"]:focus {
+            outline: none;
+            border: 1px solid blue;
+            box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+        }
+
+        /* A küldés gomb stílusa */
+        button[type="submit"] {
+            padding: 10px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        /* A nyugtához tartozó stílusok */
+        .receipt {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+          
+        .item {
+            display: flex;
+            margin-bottom: 5px;
+        }
+        
+        .item-label {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .item-details {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin: 20px;">
+        <div class="chat-container">
+            <!-- A chat üzenetek itt jelennek meg -->
+        </div>
+        <form method="POST">
+            <input type="text" placeholder="Type your message...">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
